@@ -1,9 +1,10 @@
 
 # Talks and posters
 
-Below are PDFs for talks and poster which have been given during GENESIS:
+Below are PDFs for talks and posters which have been given during GENESIS:
 
 - [2017 Delft](files/posters/2017_Delft.pdf)
+- [2017-EGU](files/posters/2017-EGU.pdf)
 - [2017-02-22 MOAP Exeter](files/posters/2017-02-22_MOAP_Exeter.pdf)
 - [2017-05-08 Convection Seminar  Basic convective element](files/presentations/2017-05-08_Convection_Seminar__Basic_convective_element.pdf)
 - [2017-05-11 Chris Bretherton visit Leeds](files/presentations/2017-05-11_Chris_Bretherton_visit_Leeds.pdf)
