@@ -27,9 +27,12 @@ def copy_files(desc, dest_dir, source_glob):
 
     source_dir = os.path.join(BASE_DIR, source_glob)
 
+    source_parts = source_glob.split('/')
+    name_pos = source_parts.index('*') - len(source_parts) - 1
+
     dirs = glob.glob(os.path.join(source_dir, "*.pdf"))
     for d in dirs:
-        name = d.split('/')[-3]
+        name = d.split('/')[name_pos]
         fn_new = os.path.join(DEST_BASE_DIR, dest_dir, "{}.pdf".format(name))
         print "\t{} \n\t -> {}".format(os.path.relpath(d), fn_new)
         shutil.copy(d, fn_new)
@@ -51,6 +54,10 @@ if __name__ == "__main__":
     files += copy_files("posters for other trips", 'posters/', "trips/*/poster")
     files += copy_files("presentations at meetings", 'presentations/', "meetings/*/presentation")
     files += copy_files("presentations at conferences", 'presentations/', "conferences/*/presentation")
+    files += copy_files("presentations generally", 'presentations/', "presentations/*")
+
+    files = set(files)
+    files = sorted(files, key=lambda f: f[0])
 
     print("Rendering template")
     with open(os.path.join("docs", "talks_and_posters.md"), "w") as fh:
