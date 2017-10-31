@@ -9,3 +9,9 @@ lightweight static site generator.
 
 Cheers,  
 Leif
+
+## Notes
+
+To build:
+
+    mkdocs build
